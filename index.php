@@ -67,3 +67,19 @@ function skydrive_options() {
 define("SKYDRIVE_CLIENT_ID", get_option('client_id'));
 define("SKYDRIVE_CLIENT_SECRET", get_option('client_secret'));
 
+/* Display */
+
+function skydrive($items) {
+
+	$client_id = SKYDRIVE_CLIENT_ID;
+	$client_secret = SKYDRIVE_CLIENT_SECRET;
+	
+	$skydrive = new SkydriveAPI($client_id, $client_secret);
+
+
+}
+
+
+
+
+
