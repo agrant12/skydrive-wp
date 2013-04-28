@@ -37,3 +37,33 @@ function skydrive_options() {
 	}
 
 ?>
+
+<div class="wrap">
+<h2>Skydrive Settings</h2>
+
+<form method="post" action="options.php">
+    <?php settings_fields( 'skydrive-personal' ); ?>
+    <table class="form-table">
+        <tr valign="top">
+        <th scope="row">Client ID</th>
+        <td><input size="65" type="text" name="client_id" value="<?php echo get_option('client_id'); ?>" /></td>
+        </tr>
+
+        <tr valign="top">
+        <th scope="row">Client Secret</th>
+        <td><input size="65" type="text" name="client_secret" value="<?php echo get_option('client_secret'); ?>" /></td>
+        </tr>
+	</table>
+
+    <p class="submit">
+    <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+    </p>
+
+</form>
+</div>
+
+<?php
+
+define("SKYDRIVE_CLIENT_ID", get_option('client_id'));
+define("SKYDRIVE_CLIENT_SECRET", get_option('client_secret'));
+
